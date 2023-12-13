@@ -19,6 +19,7 @@ body{
 }
 
 .phone-nav{
+    position: fixed;
     background: #FED9ED;
     width: 100%;
     height: fit-content;
@@ -61,7 +62,6 @@ body{
     text-align: center;
     align-items: center;
 }
-
 .header-list-phone {
     display: none;
     text-align: center;
@@ -85,6 +85,9 @@ body{
 
 .desktop-header-content{
     padding: 10px;
+}
+.phone-header{
+    padding-top: 50px;
 }
 .profile-desktop{
     padding: 10px;
