@@ -111,13 +111,14 @@ body{
     width: 25vmax;
     height: 25vmax;
     border-radius: 50%;
+    align-self: center;
 }
 .info-container-desktop{
     align-self: flex-end;
 }
 
 .info-container-desktop h1{
-    font-size: 7vmax;
+    font-size: 6vmax;
 }
 
 .info-container-desktop h2{
