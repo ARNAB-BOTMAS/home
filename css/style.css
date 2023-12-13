@@ -54,6 +54,12 @@ body{
 }
 .phone-body{
     display: none;
+    flex-direction: column;
+}
+
+.phone-header-content{
+    text-align: center;
+    align-items: center;
 }
 
 .header-list-phone {
@@ -75,5 +81,22 @@ body{
 
 .header-list-phone li{
     list-style: none;
+}
+
+.desktop-header-content{
+    padding: 10px;
+}
+.profile-desktop{
+    padding: 10px;
+    width: 25vmax;
+    height: 25vmax;
+    border-radius: 50%;
+}
+
+.profile-phone{
+    padding: 10px;
+    width: 25vmax;
+    height: 25vmax;
+    border-radius: 50%;
 }
 
