@@ -20,3 +20,18 @@ hamburger.addEventListener("click", function() {
         }, 200); // 300ms matches the transition duration
     }
 });
+
+
+var typed = new Typed('.auto-type', {
+    strings: ["Web Development", "Android Development", "Python Development"],
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true
+});
+
+var typed = new Typed('.auto-type-phone', {
+    strings: ["Web Development", "Android Development", "Python Development"],
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true
+});

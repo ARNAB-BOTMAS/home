@@ -58,11 +58,6 @@ body{
     display: none;
     flex-direction: column;
 }
-
-.phone-header-content{
-    text-align: center;
-    align-items: center;
-}
 .header-list-phone {
     display: none;
     text-align: center;
@@ -86,16 +81,18 @@ body{
 
 .desktop-header-content{
     display: flex;
-    padding: 10px;
+    padding: 50px;
 }
 .desktop-header{
     color: aliceblue;
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 100px;
+    /* padding-bottom: 20px; */
     padding-right: 10px;
     padding-left: 10px;
     background: linear-gradient(45deg, rgba(245, 70, 66, 0.75), rgba(8, 83, 156, 0.75)),  url('image/banner.gif');
     border-radius: 0 0 20px 20px;
+    height: 88vh;
+    vertical-align: middle;
 }
 .phone-header{
     color: aliceblue;
@@ -113,8 +110,11 @@ body{
     border-radius: 50%;
     align-self: center;
 }
+.desktop-image{
+    align-self: center;
+}
 .info-container-desktop{
-    align-self: flex-end;
+    align-self: center;
 }
 
 .info-container-desktop h1{
@@ -130,16 +130,13 @@ body{
 }
 
 .info-container-phone h1{
-    font-size: 5vmax;
-}
-
-.info-container-phone h2{
     font-size: 3vmax;
 }
 
-.info-container-phone p{
+.info-container-phone h2{
     font-size: 2vmax;
 }
+
 .profile-phone{
     padding: 20px;
     width: 25vmax;
@@ -147,3 +144,15 @@ body{
     border-radius: 50%;
 }
 
+.phone-image-pro{
+    text-align: center;
+    align-items: center;
+}
+
+.auto-type{
+    color: #232d38;
+}
+
+.auto-type-phone{
+    color: #232d38;
+}
