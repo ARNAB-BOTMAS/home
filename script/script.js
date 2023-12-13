@@ -10,14 +10,14 @@ hamburger.addEventListener("click", function() {
         contactList.style.display = "block";
         setTimeout(function() {
             contactList.classList.add("is-active");
-        }, 200);
+        }, 300);
     } else {
         contactList.classList.remove("is-active");
         contactList.classList.add("is-exit");
         setTimeout(function() {
             contactList.style.display = "none";
             contactList.classList.remove("is-exit");
-        }, 200); // 300ms matches the transition duration
+        }, 300); // 300ms matches the transition duration
     }
 });
 
