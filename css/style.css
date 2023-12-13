@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&family=Ephesis&family=Inter:wght@900&family=Nunito:wght@200&family=Poppins:wght@200&family=Rethink+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.desktop-nav{
+    display: flex;
+    justify-content: space-between;
+    background: #FED9ED;
+    width: 100%;
+    height: 7vmin;
+}
+
+.phone-nav{
+    background: #FED9ED;
+    width: 100%;
+    height: fit-content;
+}
+
+.header-name{
+    margin: 10px;
+    vertical-align: middle;
+}
+
+.header-name-phone{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    vertical-align: middle;
+}
+
+.header-list-desktop{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    margin: 10px;
+    vertical-align: middle;
+}
+
+.header-list-desktop li{
+    padding: 5px;
+    list-style: none;
+}
+
+.header-list-desktop a{
+    text-decoration: none;
+}
+.phone-body{
+    display: none;
+}
+
+.header-list-phone {
+    display: none;
+    text-align: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-list-phone.is-active {
+    display: block;
+    transform: translateX(0);
+}
+
+.header-list-phone.is-exit{
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-list-phone li{
+    list-style: none;
+}
+

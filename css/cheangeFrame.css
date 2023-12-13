@@ -1,0 +1,13 @@
+@media screen and (max-width: 500px) {
+    .desktop-body{
+        display: none;
+    }
+
+    .phone-body{
+        display: flex;
+    }
+}
+
+/* .phone-body{
+    display: none;
+} */
