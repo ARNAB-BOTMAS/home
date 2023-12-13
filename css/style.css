@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dhurjati&family=Ephesis&family=Inter:wght@900&family=Nunito:wght@200&family=Poppins:wght@200&family=Rethink+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&family=Ephesis&family=Inter:wght@900&family=Italianno&family=Nunito:wght@200&family=Poppins:wght@200&family=Rethink+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -91,17 +91,23 @@ body{
 .desktop-header{
     color: aliceblue;
     padding-top: 50px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
     background: linear-gradient(45deg, rgba(245, 70, 66, 0.75), rgba(8, 83, 156, 0.75)),  url('image/banner.gif');
     border-radius: 0 0 20px 20px;
 }
 .phone-header{
     color: aliceblue;
     padding-top: 50px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
     background: linear-gradient(45deg, rgba(245, 70, 66, 0.75), rgba(8, 83, 156, 0.75)),  url('image/banner.gif');
     border-radius: 0 0 20px 20px;
 }
 .profile-desktop{
-    padding: 10px;
+    padding: 20px;
     width: 25vmax;
     height: 25vmax;
     border-radius: 50%;
@@ -114,19 +120,27 @@ body{
     font-size: 7vmax;
 }
 
-.info-container-desktop h3{
+.info-container-desktop h2{
     font-size: 3vmax;
+}
+
+.info-container-desktop p{
+    font-size: 1.5vmax;
 }
 
 .info-container-phone h1{
     font-size: 5vmax;
 }
 
-.info-container-phone h3{
+.info-container-phone h2{
     font-size: 2vmax;
 }
+
+.info-container-phone p{
+    font-size: 1.5vmax;
+}
 .profile-phone{
-    padding: 10px;
+    padding: 20px;
     width: 25vmax;
     height: 25vmax;
     border-radius: 50%;
