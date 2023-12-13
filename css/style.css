@@ -28,6 +28,7 @@ body{
 
 .header-name{
     margin: 10px;
+    padding-left: 80px;
     vertical-align: middle;
 }
 
@@ -44,6 +45,10 @@ body{
     text-decoration: none;
     margin: 10px;
     vertical-align: middle;
+}
+
+.desktop-list-padding{
+    padding-right: 80px;
 }
 
 .header-list-desktop li{
