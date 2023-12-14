@@ -497,6 +497,11 @@ a{
 .education-frame-desktop h1{
     font-size: 3vmax;
     color: #5F0F40;
+    padding-bottom: 10px;
+}
+
+.education-frame-desktop h2{
+    color: #81B214;
 }
 
 .frame-edu-desk{
@@ -552,4 +557,11 @@ a{
 
 .education-frame-phone h1{
     padding-bottom: 10px;
+}
+
+.education-frame-phone h1{
+    color: #5F0F40;
+}
+.education-frame-phone h2{
+    color: #81B214;
 }
