@@ -21,6 +21,16 @@ hamburger.addEventListener("click", function() {
     }
 });
 
+contactList.addEventListener("click", function(){
+    contactList.classList.remove("is-active");
+    contactList.classList.add("is-exit");
+    setTimeout(function() {
+        contactList.style.display = "none";
+        hamburger.classList.remove("is-active");
+        contactList.classList.remove("is-exit");
+    }, 300); // 300ms matches the transition duration
+});
+
 
 var typed = new Typed('.auto-type', {
     strings: ["Web Development", "Android Development", "Python Development"],
