@@ -95,6 +95,9 @@ body{
     padding-right: 10px;
     padding-left: 10px;
     background: linear-gradient(45deg, rgba(245, 70, 66, 0.75), rgba(8, 83, 156, 0.75)),  url('image/banner.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     border-radius: 0 0 5px 5px;
     height: 88vh;
     vertical-align: middle;
@@ -114,6 +117,7 @@ body{
     height: 25vmax;
     border-radius: 50%;
     align-self: center;
+    /* border-radius: 50%; */
 }
 .desktop-image{
     align-self: center;
@@ -160,4 +164,100 @@ body{
 
 .auto-type-phone{
     color: #232d38;
+}
+
+.facebook-desktop,
+.github-desktop,
+.instagram-desktop,
+.linkedin-desktop,
+.telegram-desktop,
+.whatsapp-desktop{
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    background: #fff;
+    width: 3vmin;
+    height: 3vmin;
+    border-radius: 50%;
+    /* filter: invert(87%) sepia(39%) saturate(2162%) hue-rotate(299deg) brightness(94%) contrast(103%); */
+    filter: grayscale(1);
+    transition: transform 3s ease,
+}
+
+.facebook-desktop:hover,
+.github-desktop:hover,
+.instagram-desktop:hover,
+.linkedin-desktop:hover,
+.telegram-desktop:hover,
+.whatsapp-desktop:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 10px #000);
+    
+}
+
+.facebook-phone,
+.github-phone,
+.instagram-phone,
+.linkedin-phone,
+.telegram-phone,
+.whatsapp-phone{
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    background: #fff;
+    width: 3vmin;
+    height: 3vmin;
+    border-radius: 50%;
+    /* filter: invert(87%) sepia(39%) saturate(2162%) hue-rotate(299deg) brightness(94%) contrast(103%); */
+    filter: grayscale(1);
+    transition: transform 3s ease,
+}
+
+.facebook-phone:hover,
+.github-phone:hover,
+.instagram-phone:hover,
+.linkedin-phone:hover,
+.telegram-phone:hover,
+.whatsapp-phone:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 10px #000);
+    
+}
+
+.button-phone-cont{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.button-desktop-cont{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.about-me-phone{
+    padding: 10px;
+    width: 100px;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border: none;
+    background: #3559E0;
+    transition: transform 3s ease,
+}
+
+.about-me-desktop{
+    padding: 15px;
+    width: 150px;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border: none;
+    background: #3559E0;
+    transition: transform 3s ease,
+}
+.about-me-phone:hover,
+.about-me-desktop:hover{
+    transform: scale(1.1);
 }
