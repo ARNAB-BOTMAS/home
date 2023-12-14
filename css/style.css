@@ -309,11 +309,10 @@ a{
     border-radius: 10px;
     width: 20vw;
     filter: grayscale(1) brightness(1.4) contrast(1) drop-shadow(0px 0px 10px #000);
-    transition: transform 6s ease,
+    transition: filter 6s ease,
 }
 
 .about-me-image-desktop:hover{
-    transform: scale(1.1);
     filter: drop-shadow(0px 0px 10px #000);
 }
 
@@ -375,4 +374,109 @@ a{
 
 .content-phone-about{
     font-size: small;
+}
+
+.skills{
+    padding-top: 20px;
+    background: #49108B;
+    /* margin: 50px; */
+    text-align: center;
+}
+
+.skills h1{
+    font-size: 3vmax;
+    color: aliceblue;
+}
+
+.cards-skills-desktop{
+    /* background: #3559E0; */
+    background: #232d38;
+    color: #fff;
+    width: 100px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.desktop-skills-contents{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-gap: 10px;
+}
+
+.card-content-desktop-frame{
+    align-items: center;
+    text-align: center;
+    /* background: #fff; */
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.card-skills-desktop-1{
+    width: 100px;
+}
+
+.card-skills-desktop-2{
+    padding-top: 11px;
+    padding-bottom: 11px;
+    width: 100px;
+}
+
+.card-skills-desktop-3{
+    width: 85px;
+}
+
+.card-skills-desktop-4{
+    width: 85px;
+}
+.cards-skills-desktop h3{
+    vertical-align: baseline;
+}
+
+.card-skills-desktop-5{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100px;
+}
+
+.skills-frame-phone{
+    padding-top: 10px;
+    background: #49108B;
+    /* margin: 50px; */
+    text-align: center;
+}
+
+.skills-frame-phone h1{
+    color: #fff;
+}
+.card-content-phone-frame{
+    margin: 20px;
+}
+.phone-skills-contents{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 10px;
+    place-items: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+}
+
+.cards-skills-phone{
+    color: #fff;
+    width: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #232d38;
+}
+
+.card-skills-phone-1{
+    width: 60px;
+}
+
+.card-skills-phone-2{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 60px;
 }
