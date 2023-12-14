@@ -25,13 +25,34 @@ hamburger.addEventListener("click", function() {
 var typed = new Typed('.auto-type', {
     strings: ["Web Development", "Android Development", "Python Development"],
     typeSpeed: 50,
-    backSpeed: 50,
+    backSpeed: 30,
     loop: true
 });
 
 var typed = new Typed('.auto-type-phone', {
     strings: ["Web Development", "Android Development", "Python Development"],
     typeSpeed: 50,
-    backSpeed: 50,
+    backSpeed: 30,
     loop: true
 });
+
+function download(){
+    var pdfPath = 'script/pdf/CV2.pdf';
+
+    // Create an anchor element
+    var link = document.createElement('a');
+
+    // Set the download attribute and the file path
+    link.download = 'ArnabResume.pdf';
+    link.href = pdfPath;
+    link.target = "_blank";
+
+    // Append the anchor element to the document
+    document.body.appendChild(link);
+
+    // Trigger a click event on the anchor element
+    link.click();
+
+    // Remove the anchor element from the document
+    document.body.removeChild(link);
+}
