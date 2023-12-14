@@ -199,8 +199,8 @@ a{
     margin-right: 10px;
     padding: 5px;
     background: #fff;
-    width: 3vmin;
-    height: 3vmin;
+    width: 3vmax;
+    height: 3vmax;
     border-radius: 50%;
     /* filter: invert(87%) sepia(39%) saturate(2162%) hue-rotate(299deg) brightness(94%) contrast(103%); */
     filter: grayscale(1);
@@ -271,8 +271,9 @@ a{
 }
 
 .about-me-desktop{
+    font-size: medium;
     padding: 15px;
-    width: 150px;
+    width: 200px;
     color: aliceblue;
     text-align: center;
     border-radius: 25px;
