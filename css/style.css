@@ -228,8 +228,8 @@ a{
     margin-right: 10px;
     padding: 5px;
     background: #fff;
-    width: 3vmin;
-    height: 3vmin;
+    width: 5vmax;
+    height: 5vmax;
     border-radius: 50%;
     /* filter: invert(87%) sepia(39%) saturate(2162%) hue-rotate(299deg) brightness(94%) contrast(103%); */
     filter: grayscale(1);
@@ -258,11 +258,12 @@ a{
 }
 
 .about-me-phone{
-    padding: 10px;
-    width: 100px;
+    font-size: larger;
+    padding: 20px;
+    width: 150px;
     color: aliceblue;
     text-align: center;
-    border-radius: 25px;
+    border-radius: 50px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border: none;
     background: #3559E0;
