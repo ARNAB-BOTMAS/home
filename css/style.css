@@ -372,3 +372,7 @@ a{
 .download-phone-resume:hover{
     background: #b95e09;
 }
+
+.content-phone-about{
+    font-size: small;
+}
