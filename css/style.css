@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Dhurjati&family=Ephesis&family=Inter:wght@900&family=Nunito:wght@200&family=Poppins:wght@200&family=Rethink+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dhurjati&family=Ephesis&family=Inter:wght@900&family=Italianno&family=Nunito:wght@200&family=Poppins:wght@200&family=Rethink+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+
+@font-face {
+    font-family: 'DIGI';
+    src: url('font/LED.ttf');
+}
+
+@font-face {
+    font-family: 'jose';
+    src: url('font/JosefinSans-VariableFont_wght.ttf');
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -109,6 +120,7 @@ body{
     padding-right: 10px;
     padding-left: 10px;
     background: linear-gradient(45deg, rgba(245, 70, 66, 0.75), rgba(8, 83, 156, 0.75)),  url('image/banner.gif');
+    height: 88vh;
     border-radius: 0 0 5px 5px;
 }
 .profile-desktop{
@@ -127,10 +139,12 @@ body{
 }
 
 .info-container-desktop h1{
+    font-family: 'jose';
     font-size: 4vmax;
 }
 
 .info-container-desktop h2{
+    font-family: 'jose';
     font-size: 3vmax;
 }
 
@@ -138,13 +152,15 @@ body{
     font-size: 1.5vmax;
 }
 
-/* .info-container-phone h1{
-    font-size: 3vmax;
+.info-container-phone h1{
+    font-family: 'jose';
+
 }
 
 .info-container-phone h2{
-    font-size: 2vmax;
-} */
+    font-family: 'jose';
+
+}
 
 .profile-phone{
     padding: 20px;
@@ -159,10 +175,12 @@ body{
 }
 
 .auto-type{
+    font-family: 'DIGI';
     color: #232d38;
 }
 
 .auto-type-phone{
+    font-family: 'DIGI';
     color: #232d38;
 }
 
