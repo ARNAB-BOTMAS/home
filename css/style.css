@@ -487,3 +487,69 @@ a{
     padding-bottom: 13px;
     width: 60px;
 }
+
+.education-frame-desktop{
+    padding-top: 20px;
+    text-align: center;
+    align-self: center;
+
+}
+.education-frame-desktop h1{
+    font-size: 3vmax;
+    color: #5F0F40;
+}
+
+.frame-edu-desk{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card-education{
+    width: 70%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.card-edu-text-desk{
+    font-size: medium;
+    padding-left: 10px;
+    padding-top: 5px;
+    text-align: left;
+}
+
+.frame-edu-phone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card-education-phone{
+    width: 70%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.card-edu-text-phone{
+    font-size: small;
+    padding-left: 10px;
+    padding-top: 5px;
+    text-align: left;
+}
+
+.education-frame-phone{
+    text-align: center;
+}
+
+.education-frame-phone h1{
+    padding-bottom: 10px;
+}
