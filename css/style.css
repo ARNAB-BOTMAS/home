@@ -704,3 +704,137 @@ textarea{
 .phone-send-button{
     text-align: right;
 }
+
+.desktop-footer-body{
+    background: #232d38;
+    color: #d4e1ec;
+    padding: 20px;
+}
+.phone-footer-body{
+    background: #232d38;
+    color: #d4e1ec;
+    padding: 20px;
+}
+.content-desktop-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-content-desktop-footer{
+    display: flex;
+    justify-content: space-between;
+    gap: 4vmax;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;
+
+}
+
+.footer-desktop-protfolio{
+    width: 22vmax;
+    /* background: #152c80; */
+}
+
+.footer-desktop-quick{
+    /* background: #152c80; */
+    width: 15vmax;
+}
+
+.footer-desktop-info{
+    width: 25vmax;
+    /* background: #152c80; */
+}
+
+.footer-desktop-quick a{
+    color: #d4e1ec;
+    /* margin-top: 15px; */
+    /* margin-bottom: 10px; */
+    transition: all 0.3s;
+}
+.footer-desktop-quick p{
+    margin-bottom: 10px;
+}
+.footer-desktop-quick a:hover{
+    color: #FB8B24;;
+}
+
+.end-desktop{
+    padding-top: 10px;
+}
+
+.footer-desktop-info p{
+    margin-bottom: 10px;
+}
+
+.footer-contact-info-desktop{
+    display: flex;
+}
+
+.facebook-desktop-footer,
+.github-desktop-footer,
+.instagram-desktop-footer,
+.linkedin-desktop-footer,
+.telegram-desktop-footer,
+.whatsapp-desktop-footer{
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    background: #fff;
+    width: 1vmax;
+    height: 1vmax;
+    border-radius: 50%;
+    /* filter: invert(87%) sepia(39%) saturate(2162%) hue-rotate(299deg) brightness(94%) contrast(103%); */
+    filter: grayscale(1);
+    transition: transform 3s ease,
+}
+
+.facebook-phone-footer,
+.github-phone-footer,
+.instagram-phone-footer,
+.linkedin-phone-footer,
+.telegram-phone-footer,
+.whatsapp-phone-footer{
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    background: #fff;
+    width: 1vmax;
+    height: 1vmax;
+    border-radius: 50%;
+    /* filter: invert(87%) sepia(39%) saturate(2162%) hue-rotate(299deg) brightness(94%) contrast(103%); */
+    filter: grayscale(1);
+    transition: transform 3s ease,
+}
+.footer-phone-quick{
+    margin-top: 30px;
+}
+
+.footer-phone-quick a{
+    color: #d4e1ec;
+    transition: all 0.3s;
+}
+
+.footer-phone-quick a:hover{
+    color: #FB8B24;
+}
+.footer-phone-quick p{
+    margin-top: 5px;
+}
+.footer-phone-info{
+    margin-top: 30px;
+}
+.inner-content-phone-footer{
+    padding-bottom: 20px;
+}
+.end-phone{
+    font-size: smaller;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
+    border-top: 1px solid gray;
+    text-align: center;
+}
+
+.footer-phone-info p{
+    margin-top: 5px;
+}
