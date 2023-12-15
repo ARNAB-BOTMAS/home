@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="icon" href="image/icon/icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="css/animation.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script/animation.js"></script>
     <title>Arnab Mondal</title>
 </head>
@@ -29,7 +29,7 @@
                     <li><a href="#about-me-desktop">About Me</a></li>
                     <li><a href="#skills-desktop">Skills</a></li>
                     <li><a href="#education-desktop">Education</a></li>
-                    <li><a href="mailto:arnabmondal203@gmail">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </div>
             </div>
         </nav>
@@ -64,7 +64,7 @@
             <section class="about-me" id="about-me-desktop">
                 <h1><i class="fa fa-user" style="color: #FB8B24"></i> About <span style="color: #FB8B24">Me</span></h1>
                 <div class="about-me-con-desktop">
-                    <div class="image-desktop-about">
+                    <div class="image-desktop-about hidden-in-out">
                         <img src="image/aboutme.png" alt="aboutme.png" class="about-me-image-desktop">
                     </div>
                     <div class="content-desktop-about">
@@ -91,67 +91,67 @@
                 </div>
             </section>
             <!--Skills Section-->
-            <section class="skills hidden" id="skills-desktop">
+            <section class="skills" id="skills-desktop">
                 <h1><i class="fa fa-code" style="color: #FB8B24"></i> Skills & <span style="color: #FB8B24">Abilities</span></h1>
                 <div class="card-content-desktop-frame">
                     <div class="desktop-skills-contents">
-                        <section class="cards-skills-desktop hidden">
+                        <section class="cards-skills-desktop hidden-in-out">
                             <img src="image/skills/ReactJS.png" alt="" class="card-skills-desktop-1">
                             <h3>ReactJS</h3>
                         </section>
-                        <section class="cards-skills-desktop hidden">
+                        <section class="cards-skills-desktop hidden-in-out">
                             <img src="image/skills/NodeJS.png" alt="" class="card-skills-desktop-2">
                             <h3>NodeJS</h3>
                         </section>
-                        <section class="cards-skills-desktop hidden">
+                        <section class="cards-skills-desktop hidden-in-out">
                             <img src="image/skills/FireBase.png" alt="" class="card-skills-desktop-3">
                             <h3>Firebase</h3>
                         </section>
-                        <section class="cards-skills-desktop hidden">
+                        <section class="cards-skills-desktop hidden-in-out">
                             <img src="image/skills/HTML5.png" alt="" class="card-skills-desktop-4">
                             <h3>HTML5</h3>
                         </section>
-                        <section class="cards-skills-desktop hidden">
+                        <section class="cards-skills-desktop hidden-in-out">
                             <img src="image/skills/CSS.png" alt="" class="card-skills-desktop-4">
                             <h3>CSS</h3>
                         </section>
-                        <section class="cards-skills-desktop hidden">
+                        <section class="cards-skills-desktop hidden-in-out">
                             <img src="image/skills/JavaScript.png" alt="" class="card-skills-desktop-4">
                             <h3>JavaScript</h3>
                         </section>
-                        <section class="cards-skills-desktop hidden">
+                        <section class="cards-skills-desktop hidden-in-out">
                             <img src="image/skills/Android.png" alt="" class="card-skills-desktop-4">
                             <h3>Android</h3>
                         </section>
-                        <section class="cards-skills-desktop hidden">
+                        <section class="cards-skills-desktop hidden-in-out">
                             <img src="image/skills/PHP.png" alt="" class="card-skills-desktop-5">
                             <h3>PHP</h3>
                         </section>
-                        <section class="cards-skills-desktop hidden">
+                        <section class="cards-skills-desktop hidden-in-out">
                             <img src="image/skills/MySQL.png" alt="" class="card-skills-desktop-2">
                             <h3>MySQL</h3>
                         </section>
-                        <section class="cards-skills-desktop hidden">
+                        <section class="cards-skills-desktop hidden-in-out">
                             <img src="image/skills/PostgreSQL.png" alt="" class="card-skills-desktop-3">
                             <h3>PostgreSQL</h3>
                         </section>
-                        <section class="cards-skills-desktop hidden">
+                        <section class="cards-skills-desktop hidden-in-out">
                             <img src="image/skills/C.png" alt="" class="card-skills-desktop-4">
                             <h3>C</h3>
                         </section>
-                        <section class="cards-skills-desktop hidden">
+                        <section class="cards-skills-desktop hidden-in-out">
                             <img src="image/skills/C++.png" alt="" class="card-skills-desktop-3">
                             <h3>C++</h3>
                         </section>
-                        <section class="cards-skills-desktop hidden">
+                        <section class="cards-skills-desktop hidden-in-out">
                             <img src="image/skills/Java.png" alt="" class="card-skills-desktop-3">
                             <h3>JAVA</h3>
                         </section>
-                        <section class="cards-skills-desktop hidden">
+                        <section class="cards-skills-desktop hidden-in-out">
                             <img src="image/skills/Python.png" alt="" class="card-skills-desktop-3">
                             <h3>Python</h3>
                         </section>
-                        <section class="cards-skills-desktop hidden">
+                        <section class="cards-skills-desktop hidden-in-out">
                             <img src="image/skills/GitHub.png" alt="" class="card-skills-desktop-3">
                             <h3>GitHub</h3>
                         </section>
@@ -190,6 +190,22 @@
                             </div>
                         </section>
                     </div>
+                </div>
+            </section>
+            <section class="contact-desktop" id="contact">
+                <h1><i class="fa fa-book" style="color: #FB8B24"></i> Get In <span style="color: #FB8B24">Touch</span></h1>
+                <div class="contact-frame">
+                    <section class="contact-form">
+                        <img src="image/contacted.png" alt="" class="content-con-image hidden-in-out">
+                        <form class="desktop-con-form" id="form-desktop">
+                            <input type="text" name="name" id="name" placeholder="Name" class="hidden"><br>
+                            <input type="tel" name="phone" id="phone" placeholder="Phone" class="hidden"><br>
+                            <input type="email" name="email" id="email" placeholder="Email" class="hidden"><br>
+                            <textarea name="message" id="message" placeholder="Message" class="hidden"></textarea><br>
+                            <span class="error-message" id="error-message"></span><button type="button" class="submit hidden" onclick="sendEmail()">Submit</button>
+                            <!-- <button type="submit" class="submit">Submit</button> -->
+                        </form>
+                    </section>
                 </div>
             </section>
         </main>
@@ -274,7 +290,7 @@
                     </div>
                 </div>
             </section>
-            <section class="skills-frame-phone hidden" id="skills-phone">
+            <section class="skills-frame-phone hidden-in-out" id="skills-phone">
                 <h1><i class="fa fa-code" style="color: #FB8B24"></i> Skills & <span style="color: #FB8B24">Abilities</span></h1>
                 <div class="card-content-phone-frame">
                     <div class="phone-skills-contents">
@@ -373,6 +389,21 @@
                             </div>
                         </section>
                     </div>
+                </div>
+            </section>
+            <section class="contact-phone" id="contact-phone">
+                <h1><i class="fa fa-book" style="color: #FB8B24"></i> Get In <span style="color: #FB8B24">Touch</span></h1>
+                <div class="contact-frame-phone">
+                    <section class="contact-form-phone">
+                        <form class="phone-con-form" id="form-phone">
+                            <input type="text" name="name" id="name" placeholder="Name"><br>
+                            <input type="tel" name="phone" id="phone" placeholder="Phone"><br>
+                            <input type="email" name="email" id="email" placeholder="Email"><br>
+                            <textarea name="message" id="message" placeholder="Message"></textarea><br>
+                            <span class="error-message" id="error-message"></span><button type="button" class="submit-phone" onclick="sendEmail()">Submit</button>
+                            <!-- <button type="submit" class="submit">Submit</button> -->
+                        </form>
+                    </section>
                 </div>
             </section>
         </main>

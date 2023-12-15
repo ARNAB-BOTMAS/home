@@ -31,7 +31,7 @@ a{
     position: fixed;
     display: flex;
     justify-content: space-between;
-    background: #fed9ed98;
+    background: #fff;
     width: 100%;
     height: 7vmin;
     z-index: 999; /* Set a high z-index value */
@@ -39,7 +39,7 @@ a{
 
 .phone-nav{
     position: fixed;
-    background: #fed9ed98;
+    background: #fff;
     width: 100%;
     height: fit-content;
     z-index: 999;
@@ -561,11 +561,128 @@ a{
 
 .education-frame-phone h1{
     padding-bottom: 10px;
-}
-
-.education-frame-phone h1{
     color: #5F0F40;
 }
 .education-frame-phone h2{
     color: #81B214;
+}
+
+.contact-desktop{
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    background: #d4e1ec;
+    text-align: center;
+    align-self: center;
+}
+.contact-desktop h1{
+    font-size: 3vmax;
+    color: #5F0F40;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.contact-frame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact-form{
+    display: flex;
+    background: #49108B;
+    text-align: right;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+}
+
+input{
+    font-size: medium;
+    padding: 20px;
+    width: 40vmax;
+    margin: 10px;
+    border-radius: 5px;
+    border: 3px solid #232d38;
+}
+
+input:hover{
+    border: 3px solid green;
+}
+
+textarea:hover{
+    border: 3px solid green;
+}
+textarea{
+    font-size: 18px;
+    width: 40vmax;
+    height: 9vmax;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 3px solid #232d38;
+
+
+}
+.desktop-con-form{
+    padding: 20px;
+}
+
+.submit{
+    font-size: medium;
+    margin: 10px;
+    padding: 20px;
+    width: 10vmax;
+    border: none;
+    border-radius: 5px;
+    background: #3559E0;
+    color: #d4e1ec;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px #000;
+}
+
+.submit:hover{
+    background: #152c80;
+}
+
+.content-con-image{
+    width: 40vmax;
+    height: 40vmax;
+}
+
+.contact-phone{
+    text-align: center;
+    background: #d4e1ec;
+    padding: 20px;
+}
+
+.contact-phone h1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #5F0F40;
+}
+
+.contact-frame-phone{
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #232d38;
+}
+
+.phone-con-form{
+    text-align: right;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+
+
+}
+.contact-phone input{
+    max-width: 300px;
+    width: 100%;
+}
+.contact-phone textarea{
+    width: 300px;
+}
+.contact-phone .submit-phone{
+    margin-right: 10px;
+    width: 100px;
 }
