@@ -656,7 +656,7 @@ textarea{
 }
 
 .contact-phone h1{
-    padding-top: 10px;
+    /* padding-top: 10px; */
     padding-bottom: 10px;
     color: #5F0F40;
 }
@@ -668,7 +668,8 @@ textarea{
 }
 
 .phone-con-form{
-    text-align: right;
+    /* text-align: right; */
+    padding-top: 5px;
     padding-bottom: 10px;
     padding-right: 5px;
     padding-left: 5px;
@@ -676,13 +677,30 @@ textarea{
 
 }
 .contact-phone input{
-    max-width: 300px;
-    width: 100%;
+    max-width: 30vmax;
+    padding: 10px;
 }
 .contact-phone textarea{
-    width: 300px;
+    width: 30vmax;
+    padding: 10px;
 }
 .contact-phone .submit-phone{
     margin-right: 10px;
     width: 100px;
+    padding: 10px;
+    font-size: small;
+    border: none;
+    border-radius: 5px;
+    background: #3559E0;
+    color: #d4e1ec;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px #000;
+}
+
+.contact-phone .submit-phone:hover{
+    background: #152c80;
+}
+
+.phone-send-button{
+    text-align: right;
 }

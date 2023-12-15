@@ -202,7 +202,7 @@
                             <input type="tel" name="phone" id="phone" placeholder="Phone" class="hidden"><br>
                             <input type="email" name="email" id="email" placeholder="Email" class="hidden"><br>
                             <textarea name="message" id="message" placeholder="Message" class="hidden"></textarea><br>
-                            <span class="error-message" id="error-message"></span><button type="button" class="submit hidden" onclick="sendEmail()">Submit</button>
+                            <span class="error-message" id="error-message"></span><button type="button" class="submit hidden" onclick="sendEmail()"><i class="fa fa-send"></i> Send</button>
                             <!-- <button type="submit" class="submit">Submit</button> -->
                         </form>
                     </section>
@@ -227,7 +227,7 @@
                 <li><a href="#about-me-phone">About Me</a></li>
                 <li><a href="#skills-phone">Skills</a></li>
                 <li><a href="#education-phone">Education</a></li>
-                <li><a href="mailto:arnabmondal203@gmail">Contact</a></li>
+                <li><a href="#contact-phone">Contact</a></li>
             </div>
         </nav>
         <header class="phone-header" id="home-phone">
@@ -392,15 +392,18 @@
                 </div>
             </section>
             <section class="contact-phone" id="contact-phone">
-                <h1><i class="fa fa-book" style="color: #FB8B24"></i> Get In <span style="color: #FB8B24">Touch</span></h1>
+                <h1><i class="fa fa-headphones" style="color: #FB8B24"></i> Get In <span style="color: #FB8B24">Touch</span></h1>
                 <div class="contact-frame-phone">
-                    <section class="contact-form-phone">
+                    <section class="contact-form-phone hidden-left">
                         <form class="phone-con-form" id="form-phone">
-                            <input type="text" name="name" id="name" placeholder="Name"><br>
-                            <input type="tel" name="phone" id="phone" placeholder="Phone"><br>
-                            <input type="email" name="email" id="email" placeholder="Email"><br>
-                            <textarea name="message" id="message" placeholder="Message"></textarea><br>
-                            <span class="error-message" id="error-message"></span><button type="button" class="submit-phone" onclick="sendEmail()">Submit</button>
+                            <input type="text" name="name" id="pname" placeholder="Name"><br>
+                            <input type="tel" name="phone" id="pphone" placeholder="Phone"><br>
+                            <input type="email" name="email" id="pemail" placeholder="Email"><br>
+                            <textarea name="message" id="pmessage" placeholder="Message"></textarea><br>
+                            <span class="error-message-phone" id="error-message-phone"></span><br>
+                            <div class="phone-send-button">
+                                <button type="button" class="submit-phone" onclick="sendEmailPhone()"><i class="fa fa-send"></i> Send</button>
+                            </div>
                             <!-- <button type="submit" class="submit">Submit</button> -->
                         </form>
                     </section>
