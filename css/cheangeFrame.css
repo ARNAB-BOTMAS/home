@@ -7,6 +7,23 @@
         display: flex;
     }
 }
+@media screen and (max-width: 1000px) {
+    .desktop-body{
+        display: none;
+    }
+
+    .phone-body{
+        display: flex;
+    }
+
+    .phone-nav{
+        display: none;
+    }
+
+    .profile-phone{
+        display: none;
+    }
+}
 
 /* .phone-body{
     display: none;
