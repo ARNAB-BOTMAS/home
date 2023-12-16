@@ -1,20 +1,42 @@
 @media screen and (max-width: 500px) {
-    .desktop-body{
+    .phone-body {
+        display: flex;
+    }
+
+    .tab-body {
         display: none;
     }
 
-    .phone-body{
+    .desktop-body {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+    .phone-body {
+        display: none;
+    }
+
+    .desktop-body {
+        display: none;
+    }
+
+    .tab-body {
         display: flex;
     }
 }
 
-@media screen and (max-width: 1000px) {
-    .desktop-body{
+@media screen and (min-width: 1001px) {
+    .phone-body {
         display: none;
     }
 
-    .tab-body{
-        display: flex;
+    .tab-body {
+        display: none;
+    }
+
+    .desktop-body {
+        display: block;
     }
 }
 
