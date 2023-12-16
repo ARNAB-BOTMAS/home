@@ -983,7 +983,10 @@ textarea{
 .card-project-phone:hover .card-project-overlay-phone {
     opacity: 1; /* Show the overlay on hover */
 }
-
+.card-project-phone:hover .card-project-text-phone {
+    background: #FB8B24;
+    color: #fff;
+}
 .card-project-phone {
     position: relative;
     margin: 10px;
