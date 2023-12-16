@@ -20,6 +20,16 @@ hamburger.addEventListener("click", function() {
         }, 300); // 300ms matches the transition duration
     }
 });
+function setActiveLink(clickedElement) {
+    // Remove the 'active' class from all links
+    var links = document.querySelectorAll('.header-list li a');
+    links.forEach(function(link) {
+      link.parentNode.classList.remove('active');
+    });
+
+    // Add the 'active' class to the clicked link
+    clickedElement.parentNode.classList.add('active');
+  }
 
 contactList.addEventListener("click", function(){
     contactList.classList.remove("is-active");

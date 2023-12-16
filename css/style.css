@@ -72,13 +72,21 @@ a{
 }
 
 .header-list-desktop li{
+    margin-left: 20px;
     padding: 5px;
     list-style: none;
 }
 
-.header-list-desktop a{
+.header-list-desktop li a{
     text-decoration: none;
+    color: #232d38;
+    transition: text-decoration color 0.3s ease;
 }
+
+.header-list li.active a {
+    text-decoration: underline; /* Add underline for the active link */
+    color: #ff0000; /* Change the color to your desired active color */
+  }
 .phone-body{
     display: none;
     flex-direction: column;
@@ -88,6 +96,14 @@ a{
     text-align: center;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
+}
+
+.header-list-phone a{
+    text-decoration: none;
+    color: #232d38;
+}
+.header-list-phone li{
+    color: #232d38;
 }
 
 .header-list-phone.is-active {
@@ -262,9 +278,9 @@ a{
 }
 
 .about-me-phone{
-    font-size: medium;
-    padding: 20px;
-    width: 130px;
+    font-size: small;
+    padding: 15px;
+    width: 120px;
     color: aliceblue;
     text-align: center;
     border-radius: 50px;
@@ -286,7 +302,6 @@ a{
     background: #3559E0;
     transition: transform 3s ease,
 }
-.about-me-phone:hover,
 .about-me-desktop:hover{
     transform: scale(1.1);
 }
