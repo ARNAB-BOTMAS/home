@@ -134,8 +134,7 @@ a{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-radius: 0 0 5px 5px;
-    height: 88vh;
+    height: 100vh;
     vertical-align: middle;
 }
 .phone-header{
@@ -145,8 +144,10 @@ a{
     padding-right: 10px;
     padding-left: 10px;
     background: linear-gradient(45deg, rgba(245, 70, 66, 0.75), rgba(8, 83, 156, 0.75)),  url('image/banner.gif');
-    height: 88vh;
-    border-radius: 0 0 5px 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
 }
 .profile-desktop{
     padding: 20px;
@@ -248,12 +249,12 @@ a{
     margin-right: 10px;
     padding: 5px;
     background: #fff;
-    width: 3vmax;
-    height: 3vmax;
+    width: 3.5vmax;
+    height: 3.5vmax;
     border-radius: 50%;
     /* filter: invert(87%) sepia(39%) saturate(2162%) hue-rotate(299deg) brightness(94%) contrast(103%); */
     filter: grayscale(1);
-    transition: transform 3s ease,
+    transition: filter 3s ease,
 }
 
 .facebook-phone:hover,
@@ -262,7 +263,6 @@ a{
 .linkedin-phone:hover,
 .telegram-phone:hover,
 .whatsapp-phone:hover{
-    transform: scale(1.2);
     filter: drop-shadow(0px 0px 10px #000);
     
 }
@@ -278,9 +278,9 @@ a{
 }
 
 .about-me-phone{
-    font-size: small;
-    padding: 15px;
-    width: 120px;
+    font-size: medium;
+    padding: 20px;
+    width: 130px;
     color: aliceblue;
     text-align: center;
     border-radius: 50px;
