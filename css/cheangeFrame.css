@@ -23,6 +23,12 @@
     .profile-phone{
         display: none;
     }
+    .phone-body{
+        font-size: large;
+    }
+    .phone-skills-contents{
+        grid-template-columns: repeat(3, 50%);
+    }
 }
 
 /* .phone-body{
