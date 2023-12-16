@@ -1,36 +1,10 @@
-.phone-nav-desk{
-    position: fixed;
+.tab-body h1{
     display: flex;
-    justify-content: space-between;
-    background: #fff;
-    width: 100%;
-    height: fit-content;
-    z-index: 999;
+    align-items: center;
     vertical-align: middle;
 }
 
-.header-list-phone-desk{
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    text-decoration: none;
-    margin: 10px;
-    vertical-align: middle;
-}
-
-.header-list-phone-desk li{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-right: 10px;
-}
-.header-name-phone-desk h2{
-    margin-left: 10px;
-    padding: 10px;
-}
-
-.profile-phone-desk{
-    padding: 20px;
-    width: 40vmax;
-    height: 40vmax;
-    border-radius: 50%;
+.error-site{
+    align-items: center;
+    justify-content: center;
 }

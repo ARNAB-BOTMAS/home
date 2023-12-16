@@ -7,27 +7,14 @@
         display: flex;
     }
 }
+
 @media screen and (max-width: 1000px) {
     .desktop-body{
         display: none;
     }
 
-    .phone-body{
+    .tab-body{
         display: flex;
-    }
-
-    .phone-nav{
-        display: none;
-    }
-
-    .profile-phone{
-        display: none;
-    }
-    .phone-body{
-        font-size: large;
-    }
-    .phone-skills-contents{
-        grid-template-columns: repeat(3, 50%);
     }
 }
 
