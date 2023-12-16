@@ -206,3 +206,13 @@ function sendEmailPhone(){
         
     }
 }
+
+var animationData = {
+    container: document.getElementById('lottie-container'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'https://lottie.host/692a190e-2179-4ba3-9b35-22a04de95348/4LBNrfvOl4.json' 
+  };
+  var anim = bodymovin.loadAnimation(animationData);
+  document.getElementById("site").style.visibility = "visible";

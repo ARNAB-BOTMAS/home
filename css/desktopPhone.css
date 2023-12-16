@@ -1,4 +1,28 @@
-.error-site{
-    align-items: center;
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+.tab-body {
+    font-family: 'Silkscreen', sans-serif;
+    /* background-color: aqua; */
     justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
+
+.error-site {
+    text-align: center; /* Optional: Center text within the error-site container */
+}
+
+.site{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    visibility: hidden;
+}
+#lottie-container{
+    width: 300px;
+    height: 300px;
+}
+
+/* Add any additional styling as needed */
