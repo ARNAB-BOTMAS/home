@@ -1,5 +1,5 @@
 .tab-body {
-    font-size: large;
+    font-size: medium;
     flex-direction: column;
 }
 
@@ -333,8 +333,8 @@
 .card-project-tab {
     position: relative;
     margin: 10px;
-    width: 30vmax;
-    height: 30vmax; /* Set the width based on your design */
+    width: 20vmax;
+    height: 20vmax; /* Set the width based on your design */
     overflow: hidden; /* Hide the overflowing content */
     cursor: pointer;
     border-radius: 5px;
