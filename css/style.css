@@ -981,7 +981,7 @@ textarea{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity as needed */
     opacity: 0;
-    transition: opacity 0.3s ease-in-out; /* Smooth transition effect */
+    transition: all 0.3s; /* Smooth transition effect */
 }
 
 .card-project-phone:hover .card-project-overlay-phone {
@@ -990,6 +990,10 @@ textarea{
 .card-project-phone:hover .card-project-text-phone {
     background: #FB8B24;
     color: #fff;
+}
+
+.card-project-phone:hover{
+    transform: scale(1.05);
 }
 .card-project-phone {
     position: relative;
@@ -1056,6 +1060,7 @@ textarea{
     background: #fff;
     color: #000;
     border: 1px solid #000;
+    transform: scale(1.05);
 }
 
 .view-desktop-more{
