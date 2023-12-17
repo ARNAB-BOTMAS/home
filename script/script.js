@@ -224,6 +224,72 @@ function sendEmailPhone(){
     }
 }
 
+function sendEmailtab(){
+    var name = document.getElementById("tname");
+    var phone = document.getElementById("tphone");
+    var email = document.getElementById("temail");
+    var message = document.getElementById("tmessage");
+    var errorMsg = document.getElementById('error-message-tab');
+    if(name.value === ""){
+        name.style.border = "3px solid red";
+    } else if(phone.value === ""){
+        phone.style.border = "3px solid red";
+    } else if(email.value === ""){
+        email.style.border = "3px solid red";
+    } else if(message.value === ""){
+        message.style.border = "3px solid red";
+    } else {
+        var body = `
+            <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; border-radius: 5px;">
+                <h2>Contact Information:</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li><strong>Name:</strong> ${name.value}</li>
+                    <li><strong>Phone:</strong> ${phone.value}</li>
+                    <li><strong>Email:</strong> ${email.value}</li>
+                </ul>
+                <div style="padding: 10px; border-left: 2px solid #555;">
+                    <p><strong>Message:</strong></p>
+                    <p style="margin-left: 10px;">${message.value}</p>
+                </div>
+            </div>
+        `;
+
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "amansmas8016@gmail.com",
+            Password: "14FBF103F1DFFBA20B7C636EC073C13977D2",
+            To: 'arnabmondal203@gmail.com',
+            From: "amansmas8016@gmail.com",
+            Subject: "This is the subject",
+            Body: body
+        })
+            .then(function (msg) {
+                // Success: Email sent
+                // alert(message);
+                errorMsg.textContent = "Thank you, I will contact you later";
+                errorMsg.style.color = "#9ADE7B";
+                // Clear input fields
+                name.value = "";
+                phone.value = "";
+                email.value = "";
+                message.value = "";
+                setTimeout(function (){
+                    errorMsg.textContent = "";
+                }, 3000);
+            })
+            .catch(function (error) {
+                // Handle error
+                errorMsg.textContent = "Server Problem, Try Again";
+                errorMsg.style.color = "red";
+                // console.error("Error sending email:", error);
+                setTimeout(function (){
+                    errorMsg.textContent = "";
+                }, 3000);
+            });
+        
+    }
+}
+
 // var animationData = {
 //     container: document.getElementById('lottie-container'),
 //     renderer: 'svg',
