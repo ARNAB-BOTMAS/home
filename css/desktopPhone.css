@@ -1,28 +1,519 @@
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+.tab-body {
+    font-size: large;
+    flex-direction: column;
+}
 
-.error-body {
-    font-family: 'Silkscreen', sans-serif;
-    /* background-color: aqua; */
-    justify-content: center;
+.tab-nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    height: fit-content;
+    z-index: 999;
+    padding: 10px;
+    color: #000;
+}
+
+.tab-nav .header-name-tab{
+    margin-left: 30px;
+}
+.tab-nav .header-list-tab {
+    display: flex;
+    gap: 10px;
+    align-items: center; /* Center text vertically */
+    margin-right: 30px;
+}
+
+.tab-nav .header-list-tab li {
+    list-style: none;
+}
+
+/* Add the following to center text horizontally */
+.tab-nav .header-list-tab li a {
+    display: flex;
     align-items: center;
+    text-decoration: none;
+    color: #232d38;
+}
+
+.header-list li.active a {
+    text-decoration: underline; /* Add underline for the active link */
+    color: #ff0000; /* Change the color to your desired active color */
+  }
+
+.profile-tab{
+    padding: 20px;
+    width: 35vmax;
+    height: 35vmax;
+    border-radius: 50%;
+}
+
+.about-me-frame-tab{
+    padding: 20px;
+}
+
+.tab-header{
+    color: aliceblue;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background: linear-gradient(45deg, rgba(245, 70, 66, 0.75), rgba(8, 83, 156, 0.75)),  url('image/banner.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 100vh;
 }
 
-.error-site {
-    text-align: center; /* Optional: Center text within the error-site container */
+.tab-image-pro{
+    text-align: center;
+    align-items: center;
 }
 
-.site{
+.info-container-tab h1{
+    font-family: 'jose';
+    font-size: 6vmax;
+}
+
+
+.info-container-tab h2{
+    font-family: 'jose';
+    font-size: 5vmax;
+}
+
+.about-me-tab{
+    font-size: medium;
+    padding: 20px;
+    width: 200px;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border: none;
+    background: #3559E0;
+    transition: transform 3s ease,
+}
+
+.about-me-tab:hover{
+    transform: scale(1.1);
+}
+
+.facebook-tab,
+.github-tab,
+.instagram-tab,
+.linkedin-tab,
+.telegram-tab,
+.whatsapp-tab{
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    background: #fff;
+    width: 5vmax;
+    height: 5vmax;
+    border-radius: 50%;
+    /* filter: invert(87%) sepia(39%) saturate(2162%) hue-rotate(299deg) brightness(94%) contrast(103%); */
+    filter: grayscale(1);
+    transition: transform 3s ease,
+}
+
+.facebook-tab:hover,
+.github-tab:hover,
+.instagram-tab:hover,
+.linkedin-tab:hover,
+.telegram-tab:hover,
+.whatsapp-tab:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 10px #000);
+    
+}
+
+.tab-main-body{
+    text-align: center;
+}
+
+.tab-main-body h1{
+    margin-top: 10px;
+    font-size: 5vmax;
+}
+
+.about-me-image-tab{
+    width: 40vmax;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    filter: drop-shadow(0px 0px 10px #000);
+}
+
+
+.content-tab-about{
+    text-align: left;
+    padding-left: 5vmax;
+    padding-right: 5vmax;
+}
+
+.download-tab-resume{
+    width: 120px;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    background: #FB8B24;
+    color: aliceblue;
+    box-shadow: 0px 5px 15px #FB8B24;
+    transition: background 0.3s ease;
+}
+
+.auto-type-tab{
+    font-family: 'DIGI';
+    color: #232d38;
+}
+
+.skills-frame-tab{
+    margin-top: 20px;
+    padding-top: 5px;
+    background: #49108B;
+    /* margin: 50px; */
+    text-align: center;
+}
+
+.skills-frame-tab h1{
+    /* font-size: 3vmax; */
+    color: aliceblue;
+}
+
+.cards-skills-tab{
+    background: #232d38;
+    color: #fff;
+    width: 100px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cards-skills-tab h3{
+    vertical-align: baseline;
+}
+
+.card-skills-tab-1{
+    width: 100px;
+}
+
+.card-skills-tab-2{
+    padding-top: 11px;
+    padding-bottom: 11px;
+    width: 105px;
+}
+
+.card-skills-tab-3{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100px;
+}
+
+.card-skills-tab-5{
+    padding-top: 23px;
+    padding-bottom: 23px;
+    width: 100px;
+}
+
+.card-skills-tab-4{
+    width: 85px;
+}
+
+.tab-skills-contents{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-gap: 20px;
+    place-items: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+}
+
+.card-content-tab-frame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-education-tab{
+    width: 70%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.education-frame-tab{
+    text-align: center;
+}
+
+.education-title-tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame-edu-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;/* Optionally set the height to 100% of the viewport height */
+}
+
+/* Optional: If you want to center text horizontally using the center tag */
+.frame-edu-tab center {
+    text-align: center;
+}
+.card-education-tab{
+    padding-bottom: 10px;
+    text-align: left;
+}
+.card-edu-text-tab{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.education-frame-tab h1{
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+.education-frame-tab h1{
+    color: #5F0F40;
+}
+
+.education-frame-tab h2{
+    color: #81B214;
+}
+
+.tab-project{
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    background: #152c80;
+    text-align: center;
+    align-self: center;
+    font-size: small;
+}
+.tab-project h1{
+    color: #fff;
+}
+.card-project-overlay-tab {
+    color: #ddd;
+    position: absolute;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity as needed */
+    opacity: 0;
+    transition: all 0.3s; /* Smooth transition effect */
+}
+
+.card-project-tab:hover .card-project-overlay-tab {
+    opacity: 1; /* Show the overlay on hover */
+}
+.card-project-tab:hover .card-project-text-tab {
+    background: #FB8B24;
+    color: #fff;
+}
+
+.card-project-tab:hover{
+    transform: scale(1.05);
+}
+.card-project-tab {
+    position: relative;
+    margin: 10px;
+    width: 30vmax;
+    height: 30vmax; /* Set the width based on your design */
+    overflow: hidden; /* Hide the overflowing content */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card-project-tab img {
+    width: 100%;
+    display: block;
+    filter: brightness(1);
+}
+
+.card-project-text-tab {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #232d38;
+    background: #F4BF96; /* Set the text color */
+    padding: 10px; /* Add padding for better readability */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    opacity: 1; /* Initially visible */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition effect for background color */
+}
+
+/* .desktop-project{
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    background: #152c80;
+    text-align: center;
+    align-self: center;
+} */
+
+.phone-project h1{
+    color: #fff;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.project-tab-outer {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    visibility: hidden;
-}
-#lottie-container{
-    width: 300px;
-    height: 300px;
 }
 
-/* Add any additional styling as needed */
+.project-tab-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 20px;
+    
+}
+
+.view-tab-more{
+    margin-top: 10px;
+    padding: 10px;
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: all 0.3s;
+}
+.view-tab-more:hover{
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    transform: scale(1.1);
+}
+
+.contact-tab{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background: #d4e1ec;
+    text-align: center;
+    align-self: center;
+}
+.contact-tab h1{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.contact-frame-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.contact-form-tab {
+    text-align: center;
+}
+
+.tab-con-form {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #232d38;
+}
+
+.tab-send-button{
+    text-align: right;
+}
+
+.submit-tab{
+    margin-right: 10px;
+    width: 100px;
+    padding: 10px;
+    font-size: small;
+    border: none;
+    border-radius: 5px;
+    background: #3559E0;
+    color: #d4e1ec;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px #000;
+}
+
+.submit-tab:hover{
+    background: #152c80;
+}
+
+.tab-footer-body{
+    font-size: 10px;
+    background: #232d38;
+    color: #d4e1ec;
+    padding: 20px;
+}
+
+.content-tab-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-tab-protfolio{
+    width: 150px;
+}
+
+.facebook-tab-footer,
+.github-tab-footer,
+.instagram-tab-footer,
+.linkedin-tab-footer,
+.telegram-tab-footer,
+.whatsapp-tab-footer{
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    background: #fff;
+    width: 1vmax;
+    height: 1vmax;
+    border-radius: 50%;
+    /* filter: invert(87%) sepia(39%) saturate(2162%) hue-rotate(299deg) brightness(94%) contrast(103%); */
+    filter: grayscale(1);
+    transition: transform 3s ease,
+}
+
+.content-tab-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-content-tab-footer{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;
+
+}
+
+.footer-tab-quick a{
+    text-decoration: none;
+    color: #d4e1ec;
+}
+
+.footer-tab-quick a:hover{
+    color: #FB8B24;;
+}
+
+.end-tab{
+    font-size: smaller;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
+    /* border-top: 1px solid gray; */
+    text-align: center;
+}

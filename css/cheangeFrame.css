@@ -3,7 +3,7 @@
         display: flex;
     }
 
-    .error-body {
+    .tab-body {
         display: none;
     }
 
@@ -21,7 +21,7 @@
         display: none;
     }
 
-    .error-body {
+    .tab-body {
         display: flex;
     }
 }
@@ -31,7 +31,7 @@
         display: none;
     }
 
-    .error-body {
+    .tab-body {
         display: none;
     }
 

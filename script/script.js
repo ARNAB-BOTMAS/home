@@ -54,6 +54,13 @@ var typed = new Typed('.auto-type-phone', {
     loop: true
 });
 
+var typed = new Typed('.auto-type-tab', {
+    strings: ["Web Development", "Android Development", "Python Development"],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true
+});
+
 function download(){
     var pdfPath = 'script/pdf/CV2.pdf';
 
@@ -217,15 +224,15 @@ function sendEmailPhone(){
     }
 }
 
-var animationData = {
-    container: document.getElementById('lottie-container'),
-    renderer: 'svg',
-    loop: true,
-    autoplay: true,
-    path: 'https://lottie.host/692a190e-2179-4ba3-9b35-22a04de95348/4LBNrfvOl4.json' 
-  };
-  var anim = bodymovin.loadAnimation(animationData);
-  document.getElementById("site").style.visibility = "visible";
+// var animationData = {
+//     container: document.getElementById('lottie-container'),
+//     renderer: 'svg',
+//     loop: true,
+//     autoplay: true,
+//     path: 'https://lottie.host/692a190e-2179-4ba3-9b35-22a04de95348/4LBNrfvOl4.json' 
+//   };
+//   var anim = bodymovin.loadAnimation(animationData);
+//   document.getElementById("site").style.visibility = "visible";
 
   document.onkeydown = (e) => {
     if (e.key == 123) {
