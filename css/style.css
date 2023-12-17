@@ -1055,8 +1055,8 @@ textarea{
 }
 
 .view-desktop-more{
-    width: 100px;
-    padding: 10px;
+    width: 150px;
+    padding: 15px;
     background: none;
     color: #fff;
     border: 1px solid #fff;
@@ -1067,4 +1067,5 @@ textarea{
     background: #fff;
     color: #000;
     border: 1px solid #000;
+    transform: scale(1.1);
 }
