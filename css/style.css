@@ -934,7 +934,7 @@ textarea{
     padding: 10px; /* Add padding for better readability */
     box-sizing: border-box; /* Include padding in the width calculation */
     opacity: 1; /* Initially visible */
-    transition: background-color 0.3s ease-in-out; /* Smooth transition effect for background color */
+    transition: all 0.3s; /* Smooth transition effect for background color */
 }
 
 .card-project:hover .card-project-overlay {
@@ -944,6 +944,10 @@ textarea{
 .card-project:hover .card-project-text {
     background: #FB8B24;
     color: #fff;
+}
+
+.card-project:hover{
+    transform: scale(1.05);
 }
 
 
