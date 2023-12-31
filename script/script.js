@@ -109,6 +109,7 @@ function sendEmail(){
     } else if(message.value === ""){
         message.style.border = "3px solid red";
     } else {
+        SendNotify(name.value)
         var body = `
             <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; border-radius: 5px;">
                 <h2>Contact Information:</h2>
@@ -175,6 +176,7 @@ function sendEmailPhone(){
     } else if(message.value === ""){
         message.style.border = "3px solid red";
     } else {
+        SendNotify(name.value)
         var body = `
             <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; border-radius: 5px;">
                 <h2>Contact Information:</h2>
@@ -241,6 +243,7 @@ function sendEmailtab(){
     } else if(message.value === ""){
         message.style.border = "3px solid red";
     } else {
+        SendNotify(name.value)
         var body = `
             <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; border-radius: 5px;">
                 <h2>Contact Information:</h2>
@@ -319,3 +322,11 @@ function sendEmailtab(){
         e.preventDefault();
     }
 };
+
+function SendNotify(name){
+    var apiUrl = 'https://notificationamasport.onrender.com/send'
+    var authToken = 'amas@8016';
+
+    // Make a GET request to the Flask API
+    fetch(apiUrl + `?name=${name}`)
+}
