@@ -41,21 +41,23 @@ contactList.addEventListener("click", function(){
 
 
 var typed = new Typed('.auto-type', {
-    strings: ["Web Development", "Android Development", "Python Development"],
+    strings: ["Web Development", "Android Development", "Python Development", "GUI", "Deployment", "Software Design", "Database"],
     typeSpeed: 50,
     backSpeed: 30,
     loop: true
 });
 
 var typed = new Typed('.auto-type-phone', {
-    strings: ["Web Development", "Android Development", "Python Development"],
+    // strings: ["Web Development", "Android Development", "Python Development"],
+    strings: ["Web Development", "Android Development", "Python Development", "GUI", "Deployment", "Software Design", "Database"],
     typeSpeed: 50,
     backSpeed: 30,
     loop: true
 });
 
 var typed = new Typed('.auto-type-tab', {
-    strings: ["Web Development", "Android Development", "Python Development"],
+    // strings: ["Web Development", "Android Development", "Python Development"],
+    strings: ["Web Development", "Android Development", "Python Development", "GUI", "Deployment", "Software Design", "Database"],
     typeSpeed: 50,
     backSpeed: 30,
     loop: true
