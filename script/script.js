@@ -1,7 +1,6 @@
 var hamburger = document.querySelector(".hamburger");
 var contactList = document.querySelector(".header-list-phone");
 
-
 hamburger.addEventListener("click", function() {
     hamburger.classList.toggle("is-active");
     var isActive = hamburger.classList.contains("is-active");
@@ -111,7 +110,7 @@ function sendEmail(){
         message.style.border = "3px solid red";
     } else {
 
-        if (SendNotify(name.value)){
+        if (!sendNotify(name.value)){
             errorMsg.textContent = "Server Problem, Try Again";
             errorMsg.style.color = "red";
 
@@ -172,11 +171,11 @@ function sendEmail(){
 }
 
 function sendEmailPhone(){
-    var name = document.getElementById("name");
-    var phone = document.getElementById("phone");
-    var email = document.getElementById("email");
-    var message = document.getElementById("message");
-    var errorMsg = document.getElementById('error-message');
+    var name = document.getElementById("pname");
+    var phone = document.getElementById("pphone");
+    var email = document.getElementById("pemail");
+    var message = document.getElementById("pmessage");
+    var errorMsg = document.getElementById('error-message-phone');
     if(name.value === ""){
         name.style.border = "3px solid red";
     } else if(phone.value === ""){
@@ -187,7 +186,7 @@ function sendEmailPhone(){
         message.style.border = "3px solid red";
     } else {
 
-        if (SendNotify(name.value)){
+        if (!sendNotify(name.value)){
             errorMsg.textContent = "Server Problem, Try Again";
             errorMsg.style.color = "red";
 
@@ -248,11 +247,11 @@ function sendEmailPhone(){
 }
 
 function sendEmailtab(){
-    var name = document.getElementById("name");
-    var phone = document.getElementById("phone");
-    var email = document.getElementById("email");
-    var message = document.getElementById("message");
-    var errorMsg = document.getElementById('error-message');
+    var name = document.getElementById("tname");
+    var phone = document.getElementById("tphone");
+    var email = document.getElementById("temail");
+    var message = document.getElementById("tmessage");
+    var errorMsg = document.getElementById('error-message-tab');
     if(name.value === ""){
         name.style.border = "3px solid red";
     } else if(phone.value === ""){
@@ -263,7 +262,7 @@ function sendEmailtab(){
         message.style.border = "3px solid red";
     } else {
 
-        if (SendNotify(name.value)){
+        if (!sendNotify(name.value)){
             errorMsg.textContent = "Server Problem, Try Again";
             errorMsg.style.color = "red";
 
@@ -351,28 +350,31 @@ function sendEmailtab(){
     }
 };
 
-function SendNotify(name){
-    fetch('https://api.pushbullet.com/v2/pushes', {
-        method: 'POST',
-        headers: {
-          'Access-Token': config.API_KEY, // Replace with your actual API key
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          type: 'note',
-          title: `Portfilio Web Message`,
-          body: `${name} want to talk`,
-        }),
-      })
-      .then(response => response.json())
-      .then(data => {
-        return true;
+async function sendNotify(name) {
+    try {
+        const response = await fetch('https://api.pushbullet.com/v2/pushes', {
+            method: 'POST',
+            headers: {
+                'Access-Token': config.API_KEY, // Replace with your actual API key
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                type: 'note',
+                title: 'Portfolio Web Message',
+                body: `${name} wants to talk`,
+            }),
+        });
+
+        const data = await response.json();
         // console.log('Notification Sent:', data);
         // alert('Notification Sent:\n' + JSON.stringify(data, null, 2));
-      })
-      .catch(error => {
+        return true;
+    } catch (error) {
         // console.error('Error:', error);
-        return false;
         // alert('Error: ' + error.message);
-      });
+        return false;
+    }
 }
+
+// Example usage:
+// sendNotify('John Doe');
