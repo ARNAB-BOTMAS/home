@@ -1,4 +1,4 @@
 // config.js
 const config = {
-    pushbullet: 'o.q3nyPL1xdAZ80u8POVGKqpYdF0LJUXlq', // Replace with your actual API key
+    pushbullet: 'o.Z6fWiIW16Vt1zsZCwTbQgn0733luqwiC', // Replace with your actual API key
   };
