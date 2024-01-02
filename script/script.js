@@ -1,3 +1,5 @@
+import apiKeys from "./config";
+
 var hamburger = document.querySelector(".hamburger");
 var contactList = document.querySelector(".header-list-phone");
 
@@ -378,11 +380,12 @@ function sendEmailTab() {
 };
 
 async function sendNotify(name) {
+    const pushbulletApiKey = config.API_KEY;
     try {
         const response = await fetch('https://api.pushbullet.com/v2/pushes', {
             method: 'POST',
             headers: {
-                'Access-Token': config.API_KEY, // Replace with your actual API key
+                'Access-Token': pushbulletApiKey, // Replace with your actual API key
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
