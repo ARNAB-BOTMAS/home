@@ -1,92 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        nav {
-            background-color: #333;
-            position: fixed;
-            width: 100%;
-        }
-
-        nav a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        nav a.active {
-            color: #ff0000; /* Change this to the desired color for the active link */
-        }
-
-        section {
-            height: 1000px; /* Add some height to create a scrollable page */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pushbullet API Example</title>
+  <script src="https://cdn.pushbullet.com/js/pushbullet.js"></script>
 </head>
 <body>
 
-<nav>
-    <a href="#section1" class="nav-link">Section 1</a>
-    <a href="#section2" class="nav-link">Section 2</a>
-    <a href="#section3" class="nav-link">Section 3</a>
-</nav>
-
-<section id="section1">
-    <h2>Section 1</h2>
-    <p>This is the content of section 1.</p>
-</section>
-
-<section id="section2">
-    <h2>Section 2</h2>
-    <p>This is the content of section 2.</p>
-</section>
-
-<section id="section3">
-    <h2>Section 3</h2>
-    <p>This is the content of section 3.</p>
-</section>
+<button onclick="sendNotification()">Send Notification</button>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var navLinks = document.querySelectorAll('.nav-link');
+  // Replace 'YOUR_API_KEY' with your actual Pushbullet API key
+  //var pushbullet = new PushBullet('o.NiP9A3dx7xCIJJbgoXxuvH08bGyX5skO');
 
-        function highlightNavLink() {
-            var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
-            navLinks.forEach(function (link) {
-                var section = document.querySelector(link.getAttribute('href'));
-                var sectionTop = section.offsetTop;
-                var sectionBottom = sectionTop + section.offsetHeight;
-
-                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', highlightNavLink);
+  function sendNotification() {
+    fetch('https://api.pushbullet.com/v2/pushes', {
+      method: 'POST',
+      headers: {
+        'Access-Token': 'o.NiP9A3dx7xCIJJbgoXxuvH08bGyX5skO', // Replace with your actual API key
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        type: 'note',
+        title: 'Notification Title',
+        body: 'This is the notification body.',
+      }),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Notification Sent:', data);
+      alert('Notification Sent:\n' + JSON.stringify(data, null, 2));
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Error: ' + error.message);
     });
+  }
 </script>
 
 </body>

@@ -109,7 +109,16 @@ function sendEmail(){
     } else if(message.value === ""){
         message.style.border = "3px solid red";
     } else {
-        SendNotify(name.value)
+
+        if (SendNotify(name.value)){
+            errorMsg.textContent = "Server Problem, Try Again";
+            errorMsg.style.color = "red";
+
+            setTimeout(function (){
+                errorMsg.textContent = "";
+            }, 3000);
+
+        } else {
         var body = `
             <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; border-radius: 5px;">
                 <h2>Contact Information:</h2>
@@ -157,16 +166,16 @@ function sendEmail(){
                     errorMsg.textContent = "";
                 }, 3000);
             });
-        
+        }
     }
 }
 
 function sendEmailPhone(){
-    var name = document.getElementById("pname");
-    var phone = document.getElementById("pphone");
-    var email = document.getElementById("pemail");
-    var message = document.getElementById("pmessage");
-    var errorMsg = document.getElementById('error-message-phone');
+    var name = document.getElementById("name");
+    var phone = document.getElementById("phone");
+    var email = document.getElementById("email");
+    var message = document.getElementById("message");
+    var errorMsg = document.getElementById('error-message');
     if(name.value === ""){
         name.style.border = "3px solid red";
     } else if(phone.value === ""){
@@ -176,7 +185,16 @@ function sendEmailPhone(){
     } else if(message.value === ""){
         message.style.border = "3px solid red";
     } else {
-        SendNotify(name.value)
+
+        if (SendNotify(name.value)){
+            errorMsg.textContent = "Server Problem, Try Again";
+            errorMsg.style.color = "red";
+
+            setTimeout(function (){
+                errorMsg.textContent = "";
+            }, 3000);
+
+        } else {
         var body = `
             <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; border-radius: 5px;">
                 <h2>Contact Information:</h2>
@@ -224,16 +242,16 @@ function sendEmailPhone(){
                     errorMsg.textContent = "";
                 }, 3000);
             });
-        
+        }
     }
 }
 
 function sendEmailtab(){
-    var name = document.getElementById("tname");
-    var phone = document.getElementById("tphone");
-    var email = document.getElementById("temail");
-    var message = document.getElementById("tmessage");
-    var errorMsg = document.getElementById('error-message-tab');
+    var name = document.getElementById("name");
+    var phone = document.getElementById("phone");
+    var email = document.getElementById("email");
+    var message = document.getElementById("message");
+    var errorMsg = document.getElementById('error-message');
     if(name.value === ""){
         name.style.border = "3px solid red";
     } else if(phone.value === ""){
@@ -243,7 +261,16 @@ function sendEmailtab(){
     } else if(message.value === ""){
         message.style.border = "3px solid red";
     } else {
-        SendNotify(name.value)
+
+        if (SendNotify(name.value)){
+            errorMsg.textContent = "Server Problem, Try Again";
+            errorMsg.style.color = "red";
+
+            setTimeout(function (){
+                errorMsg.textContent = "";
+            }, 3000);
+
+        } else {
         var body = `
             <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; border-radius: 5px;">
                 <h2>Contact Information:</h2>
@@ -291,7 +318,7 @@ function sendEmailtab(){
                     errorMsg.textContent = "";
                 }, 3000);
             });
-        
+        }
     }
 }
 
@@ -324,9 +351,27 @@ function sendEmailtab(){
 };
 
 function SendNotify(name){
-    var apiUrl = 'https://notificationamasport.onrender.com/send'
-    var authToken = 'amas@8016';
-
-    // Make a GET request to the Flask API
-    fetch(apiUrl + `?name=${name}`)
+    fetch('https://api.pushbullet.com/v2/pushes', {
+        method: 'POST',
+        headers: {
+          'Access-Token': 'o.NiP9A3dx7xCIJJbgoXxuvH08bGyX5skO', // Replace with your actual API key
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'note',
+          title: `Portfilio Web Message`,
+          body: `${name} want to talk`,
+        }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        return true;
+        // console.log('Notification Sent:', data);
+        // alert('Notification Sent:\n' + JSON.stringify(data, null, 2));
+      })
+      .catch(error => {
+        // console.error('Error:', error);
+        return false;
+        // alert('Error: ' + error.message);
+      });
 }
