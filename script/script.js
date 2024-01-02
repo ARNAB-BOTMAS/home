@@ -1,4 +1,4 @@
-import apiKeys from "./config";
+// import apiKeys from './api-keys';
 
 var hamburger = document.querySelector(".hamburger");
 var contactList = document.querySelector(".header-list-phone");
@@ -380,7 +380,7 @@ function sendEmailTab() {
 };
 
 async function sendNotify(name) {
-    const pushbulletApiKey = config.API_KEY;
+    const pushbulletApiKey = apiKeys.pushbullet;
     try {
         const response = await fetch('https://api.pushbullet.com/v2/pushes', {
             method: 'POST',
@@ -396,11 +396,11 @@ async function sendNotify(name) {
         });
 
         const data = await response.json();
-        // console.log('Notification Sent:', data);
+        console.log('Notification Sent:', data);
         // alert('Notification Sent:\n' + JSON.stringify(data, null, 2));
         return true;
     } catch (error) {
-        // console.error('Error:', error);
+        console.error('Error:', error);
         // alert('Error: ' + error.message);
         return false;
     }
