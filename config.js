@@ -1,5 +1,4 @@
 // config.js
 const config = {
-    API_KEY: 'DUMMY_PUSHBULLET_API_KEY', // Replace with your actual API key
+  pushbullet: 'o.q3nyPL1xdAZ80u8POVGKqpYdF0LJUXlq',
   };
-export default config;
