@@ -132,7 +132,7 @@ function sendEmail() {
             setTimeout(function () {
                 errorMsg.textContent = "";
             }, 3000);
-        } else {
+        } else if(sendNotify(name.value)) {
             var body = `
                 <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; border-radius: 5px;">
                     <h2>Contact Information:</h2>
@@ -176,6 +176,14 @@ function sendEmail() {
                         errorMsg.textContent = "";
                     }, 3000);
                 });
+        }
+        else{
+            errorMsg.textContent = "Server Problem, Try Again";
+            errorMsg.style.color = "red";
+
+            setTimeout(function () {
+                errorMsg.textContent = "";
+            }, 3000);
         }
     }
 }
@@ -217,7 +225,7 @@ function sendEmailPhone() {
             setTimeout(function () {
                 errorMsg.textContent = "";
             }, 3000);
-        } else {
+        } else if(sendNotify(name.value)) {
             var body = `
                 <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; border-radius: 5px;">
                     <h2>Contact Information:</h2>
@@ -261,6 +269,14 @@ function sendEmailPhone() {
                         errorMsg.textContent = "";
                     }, 3000);
                 });
+        }
+        else{
+            errorMsg.textContent = "Server Problem, Try Again";
+            errorMsg.style.color = "red";
+
+            setTimeout(function () {
+                errorMsg.textContent = "";
+            }, 3000);
         }
     }
 }
@@ -302,7 +318,7 @@ function sendEmailTab() {
             setTimeout(function () {
                 errorMsg.textContent = "";
             }, 3000);
-        } else {
+        } else if(sendNotify(name.value)) {
             var body = `
                 <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; border-radius: 5px;">
                     <h2>Contact Information:</h2>
@@ -347,6 +363,14 @@ function sendEmailTab() {
                     }, 3000);
                 });
         }
+        else{
+            errorMsg.textContent = "Server Problem, Try Again";
+            errorMsg.style.color = "red";
+
+            setTimeout(function () {
+                errorMsg.textContent = "";
+            }, 3000);
+        }
     }
 }
 
@@ -382,7 +406,7 @@ function sendEmailTab() {
 async function sendNotify(name) {
     const pushbulletApiKey = apiKeys.pushbullet;
     try {
-        const response = await fetch('https://api.pushbullet.com/v2/pushes', {
+        const response = fetch('https://api.pushbullet.com/v2/pushes', {
             method: 'POST',
             headers: {
                 'Access-Token': pushbulletApiKey, // Replace with your actual API key
@@ -395,12 +419,12 @@ async function sendNotify(name) {
             }),
         });
 
-        const data = await response.json();
+        const data = response.json();
         console.log('Notification Sent:', data);
         // alert('Notification Sent:\n' + JSON.stringify(data, null, 2));
         return true;
     } catch (error) {
-        console.error('Error:', error);
+        console.log('Error:', error);
         // alert('Error: ' + error.message);
         return false;
     }
