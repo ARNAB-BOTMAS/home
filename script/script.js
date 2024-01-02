@@ -264,7 +264,7 @@ function sendEmailPhone() {
 }
 
 
-function sendEmailPhone() {
+function sendEmailTab() {
     var name = document.getElementById("tname");
     var phone = document.getElementById("tphone");
     var email = document.getElementById("temail");
