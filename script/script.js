@@ -1,6 +1,7 @@
 var hamburger = document.querySelector(".hamburger");
 var contactList = document.querySelector(".header-list-phone");
 
+
 hamburger.addEventListener("click", function() {
     hamburger.classList.toggle("is-active");
     var isActive = hamburger.classList.contains("is-active");
@@ -354,7 +355,7 @@ function SendNotify(name){
     fetch('https://api.pushbullet.com/v2/pushes', {
         method: 'POST',
         headers: {
-          'Access-Token': 'o.NiP9A3dx7xCIJJbgoXxuvH08bGyX5skO', // Replace with your actual API key
+          'Access-Token': config.API_KEY, // Replace with your actual API key
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
